@@ -151,6 +151,7 @@
         const lat = myLocation.lat;
         const lon = myLocation.lon;
         const url = 'https://esoptron.hu:8043/locations?lat=' + lat + '&lng=' + lon + '&textQuery=' + query;
+        console.log(lat,lon)
 
         try {
         const response = await fetch(url);
@@ -179,6 +180,11 @@ function getRecievedText(event:any){
   getPlaces(event.detail);
   console.log(event.detail);
 }
+
+function basicSearch(event:any){
+    getPlaces(event.detail);
+    console.log(event.detail);
+}
 </script>
 
 <!-- <div style="position:fixed; top:0; left: 0; width:50%; height:50%; background:black; color: white;">Test</div> -->
@@ -190,6 +196,7 @@ function getRecievedText(event:any){
           <Overlay
               on:relocalize={() => relocalize()}
               on:textInput={getRecievedText}
+              on:categorySelected={basicSearch}
           />
       {/if}
   </svelte:fragment>

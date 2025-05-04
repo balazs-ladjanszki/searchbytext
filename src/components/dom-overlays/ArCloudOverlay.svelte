@@ -61,16 +61,15 @@
     }
 
     button {
-        width: 100%;
-        height: 49px;
+    width: 100%;
+    height: 49px;
+    margin-bottom: 27px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #2e4458;
+    border-radius: var(--ui-radius);
+    color: #2e4458;
+}
 
-        margin-bottom: 27px;
-
-        font-size: 18px;
-        font-weight: bold;
-
-        background-color: white;
-        border: 2px solid #2e4458;
-        border-radius: var(--ui-radius);
-    }
 </style>
